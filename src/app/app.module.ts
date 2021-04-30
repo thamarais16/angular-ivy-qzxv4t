@@ -11,7 +11,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule  ],
+  imports:      [ 
+    BrowserModule, 
+    FormsModule, 
+    ReactiveFormsModule  
+    ],
   declarations: [ 
     AppComponent,
     HelloComponent,
