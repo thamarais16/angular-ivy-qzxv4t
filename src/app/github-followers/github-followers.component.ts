@@ -6,7 +6,7 @@ import { Router } from '@angular/router'
   templateUrl: './github-followers.component.html',
   styleUrls: ['./github-followers.component.css']
 })
-export class GithubFollowersComponent implements OnInit {
+export class GithubFollowersComponent implements OnInit {  
   followers: Follower<string, number>[];
   
   constructor(
