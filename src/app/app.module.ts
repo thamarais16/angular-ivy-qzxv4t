@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -14,7 +15,28 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
   imports:      [ 
     BrowserModule, 
     FormsModule, 
-    ReactiveFormsModule  
+    ReactiveFormsModule ,
+    
+    RouterModule.forRoot(
+      [
+        {
+          path:'', 
+          component:HomeComponent
+        },
+        {
+          path:'followers/:userId', 
+          component:GithubprofileComponent
+        },
+        {
+          path:'followers', 
+          component:GithubFollowersComponent
+        },
+        {
+          path:'**', //wildcard
+          component:NotFoundComponent
+        },
+      ]
+    ),
     ],
   declarations: [ 
     AppComponent,
