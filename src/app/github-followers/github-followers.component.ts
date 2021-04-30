@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-github-followers',
@@ -8,13 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class GithubFollowersComponent implements OnInit {
   followers: Follower<string, number>[];
   
-  constructor() { }
+  constructor(
+    private route: Router
+  ) { }
 
   ngOnInit() {
     this.followers = [
       new Follower("Thamarai",1),
       new Follower("Selvan", 2)
     ]
+    //this.route.navigate(['/posts'])
   }
 
 }
