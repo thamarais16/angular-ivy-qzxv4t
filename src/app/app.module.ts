@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { GithubprofileComponent } from './githubprofile/githubprofile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GithubFollowersComponent } from './github-followers/github-followers.component';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   imports:      [ 
@@ -26,6 +27,10 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
         {
           path:'followers/:userId', 
           component:GithubprofileComponent
+        },
+        {
+          path:'posts', 
+          component:PostComponent
         },
         {
           path:'followers', 
@@ -45,7 +50,7 @@ import { GithubFollowersComponent } from './github-followers/github-followers.co
     HomeComponent, 
     GithubprofileComponent, 
     NotFoundComponent, 
-    GithubFollowersComponent 
+    GithubFollowersComponent, PostComponent 
   ],
   bootstrap:    [ AppComponent ]
 })
