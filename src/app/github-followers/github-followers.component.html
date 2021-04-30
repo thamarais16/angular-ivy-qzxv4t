@@ -1,1 +1,10 @@
-<p>followers</p>
+<div class="card">
+  <div class="container">
+    <div class="container-fluid">
+     <ng-container *ngFor="let follower of followers">
+       <a class="nav-link" [routerLink]="['/followers', follower.id]">{{follower.name}}</a>
+     </ng-container>
+    </div>
+  </div>
+
+</div>
